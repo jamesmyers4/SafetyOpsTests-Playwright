@@ -1,4 +1,9 @@
 <Solution>
   <Project Path="../ESAMSapp/ESAMSapp.csproj" />
+  <Project Path="../EsamsClient/esamsclient.client/esamsclient.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="../EsamsClient/EsamsClient.Server/EsamsClient.Server.csproj" Id="ab74b23b-872a-47c6-953d-39c06701c374" />
   <Project Path="EsamsTest.csproj" />
 </Solution>
