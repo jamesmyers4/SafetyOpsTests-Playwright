@@ -10,20 +10,18 @@ LayerTechnologyLanguageC# / .NET 10Test FrameworkNUnitBrowser AutomationMicrosof
 
 Project Structure
 
+```
 Config/
   TestConfig.cs              Binds appsettings.json to a typed config object
-
 Helpers/
   RandomName.cs              Generates standard and adversarial name inputs
-
 Pages/
   LoginPage.cs               Page object model for the login flow
-
 AddUserTests.cs              NUnit test class covering user creation scenarios
 appsettings.json             Environment configuration (base URL, credentials)
 EsamsTest.csproj             Project file targeting .NET 10
 EsamsTest.slnx               Solution file
-
+```
 
 Configuration
 
