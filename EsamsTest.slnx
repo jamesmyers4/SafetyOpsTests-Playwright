@@ -1,9 +1,0 @@
-<Solution>
-  <Project Path="../ESAMSapp/SafetyOpsApp.csproj" />
-  <Project Path="../EsamsClient/esamsclient.client/safetyopsclient.client.esproj">
-    <Build />
-    <Deploy />
-  </Project>
-  <Project Path="../EsamsClient/EsamsClient.Server/SafetyOpsClient.Server.csproj" Id="ab74b23b-872a-47c6-953d-39c06701c374" />
-  <Project Path="SafetyOpsTest.csproj" />
-</Solution>

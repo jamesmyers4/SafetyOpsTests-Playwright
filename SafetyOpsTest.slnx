@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="../SAFETYOPSapp/SafetyOpsApp.csproj" />
+  <Project Path="../SafetyOpsClient/safetyopsclient.client/safetyopsclient.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="../SafetyOpsClient/SafetyOpsClient.Server/SafetyOpsClient.Server.csproj" Id="ab74b23b-872a-47c6-953d-39c06701c374" />
+  <Project Path="SafetyOpsTest.csproj" />
+</Solution>

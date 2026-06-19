@@ -19,8 +19,8 @@ Pages/
   LoginPage.cs               Page object model for the login flow
 AddUserTests.cs              NUnit test class covering user creation scenarios
 appsettings.json             Environment configuration (base URL, credentials)
-EsamsTest.csproj             Project file targeting .NET 10
-EsamsTest.slnx               Solution file
+SafetyOpsTest.csproj             Project file targeting .NET 10
+SafetyOpsTest.slnx               Solution file
 ```
 
 Configuration
