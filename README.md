@@ -26,7 +26,7 @@ SafetyOpsTest.slnx               Solution file
 Configuration
 
 Tests are configured via appsettings.json. Copy the template below and fill in your local values:
-
+```
 json{
   "TestSettings": {
     "BaseUrl": "https://localhost:7075",
@@ -34,7 +34,7 @@ json{
     "Password": "your-test-password"
   }
 }
-
+```
 Environment variables can override any appsettings.json value at runtime, following standard Microsoft.Extensions.Configuration precedence.
 
 
