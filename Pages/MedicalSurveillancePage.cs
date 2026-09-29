@@ -87,7 +87,7 @@ public static class MedicalSurveillancePage
         var names = (await links.AllInnerTextsAsync()).Select(n => n.Trim()).Where(n => n != except).ToList();
         Assert.That(names, Is.Not.Empty, "No people in the person picker");
         var name = names[Random.Next(names.Count)];
-        await popup.GetByRole(AriaRole.Link, new() { Name = name, Exact = true }).First.ClickAsync();
+        await Popups.ClickAndExpectCloseAsync(popup, popup.GetByRole(AriaRole.Link, new() { Name = name, Exact = true }).First);
         await Assertions.Expect(PersonEvaluated(frame)).ToHaveValueAsync(name);
         return name;
     }

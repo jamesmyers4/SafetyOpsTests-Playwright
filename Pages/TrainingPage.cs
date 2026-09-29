@@ -60,7 +60,7 @@ public static class TrainingPage
     {
         var popup = await page.RunAndWaitForPopupAsync(() => frame.Locator("#course-picker-button").ClickAsync());
         await popup.GetByRole(AriaRole.Button, new() { Name = "Search" }).ClickAsync();
-        await popup.GetByRole(AriaRole.Link, new() { Name = courseName, Exact = true }).ClickAsync();
+        await Popups.ClickAndExpectCloseAsync(popup, popup.GetByRole(AriaRole.Link, new() { Name = courseName, Exact = true }));
         await Assertions.Expect(CourseTitle(frame)).ToHaveValueAsync(courseName);
     }
 
