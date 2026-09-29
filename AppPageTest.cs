@@ -94,8 +94,18 @@ public abstract class AppPageTest : PageTest
     /// <summary>Signs this test's browser context out and back in as <paramref name="user"/>.</summary>
     protected async Task SwitchUserAsync(Credentials user)
     {
-        await Context.ClearCookiesAsync();
+        await SignOutAsync();
         await ApiSession.SignInAsync(Context, user);
+    }
+
+    /// <summary>
+    /// Leaves the app, then drops the auth cookie. Leaving first matters: a page still loading its
+    /// data would get a 401 and redirect itself to /login, cutting off the test's next navigation.
+    /// </summary>
+    protected async Task SignOutAsync()
+    {
+        await Page.GotoAsync("about:blank");
+        await Context.ClearCookiesAsync();
     }
 
     /// <summary>A second, independent browser session signed in as <paramref name="user"/>.</summary>

@@ -11,7 +11,7 @@ public class NavigationTests : AppPageTest
     [Test]
     public async Task UiSignInFromSplashLandsOnHome()
     {
-        await Context.ClearCookiesAsync();
+        await SignOutAsync();
         await LoginPage.SignInFromSplashAsync(Page, DemoUsers.Admin.Username, DemoUsers.Admin.Password);
         await Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Welcome to SAFETYOPS" })).ToBeVisibleAsync();
         await Expect(Navigation.SignedInUser(Page)).ToHaveTextAsync("Demo Admin");
